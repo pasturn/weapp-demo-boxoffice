@@ -1,0 +1,16 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: block;
+  padding: 0rpx 0;
+  box-sizing: border-box;
+} 
+.text-green{
+  color: #4ec046;
+}
+.bg-lightgreen{
+  background: #74e270;
+}
+.bg-lightgray{
+  background:  #f4f4f4;
+}

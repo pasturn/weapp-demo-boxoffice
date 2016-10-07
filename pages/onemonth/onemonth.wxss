@@ -1,0 +1,135 @@
+/**index.wxss**/
+.nav {
+  box-sizing: border-box;
+  height: 44px;
+  width: 100%;
+  border-bottom:  2rpx solid #eeeeee;
+}
+.nav-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav-cell {
+  display: table;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 0 32rpx;
+  height: 100%;
+  font-size: 28rpx;
+  color: #666666;
+  border-bottom: 4rpx solid rgba(0, 0, 0, 0);  
+}
+.nav-cell-text{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.nav .active {
+  color: #4ec046;
+  border-bottom: 4rpx solid #4ec046;  
+}
+
+.content-flex {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+.content {
+  width: 100%;
+  box-sizing: border-box;
+}
+.content-item {
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  line-height: 1.5;
+}
+
+.sunBox {
+  height: 88rpx;
+  width: 100%;
+  line-height: 2.8;
+  font-size: 34rpx;
+  text-align: center;
+}
+.list-h {
+  color: #ffffff;
+  height: 56rpx;
+  width: 100%;
+  display:table;   
+  font-size: 24rpx;
+  padding: 10rpx 0;
+  text-align: right;
+}
+.list-c {
+  text-align: right;
+  width: 100%;
+  display:table;   
+  font-size: 24rpx;
+  padding: 30rpx 0;
+  color: #666666;
+}
+
+.list-item {
+  box-sizing: border-box;
+  vertical-align:middle;   
+  display:table-cell; 
+  padding-left:6rpx;
+  width: 17.5%;
+
+}
+.list-item-first {
+  box-sizing: border-box;
+  text-align: left;
+  vertical-align:middle;   
+  display:table-cell; 
+  width: 30%;
+  position: relative;
+}
+.film-name {
+  font-weight: 500;
+  color: #000000;
+}
+.rank{
+  position: absolute;
+  display: inline-block;
+  border-radius: 8rpx; 
+  background: #e4e4e4;
+  width:36rpx;
+  height: 36rpx;
+  text-align: center;
+  line-height: 1.7
+}
+.item-title{
+  padding-left: 46rpx;
+}
+.item-tip{
+  display: block;
+  font-weight: 100;
+  color:#999999;
+  font-size: 24rpx;
+}
+.statisticsData{
+  padding: 6rpx 0;
+  font-size: 24rpx;
+  text-align: center;
+}
+.s-data-item{
+    width: 50%;
+    padding: 6rpx 0;
+    display: inline-block;
+}
+.top1 {
+  background: #1bb510;
+}
+.top2{
+  background: #4ec046;
+}
+.top3 {
+  background: #7dd277;
+}
+.top1,.top2,.top3{
+  color: #ffffff;
+}

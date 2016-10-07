@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/living/living",
+    "pages/oneday/oneday",
+    "pages/oneweek/oneweek",
+    "pages/onemonth/onemonth",
+    "pages/year/year",
+    "pages/cinema/cinema"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "电影票房",
+    "navigationBarTextStyle":"black"
+  }
+}

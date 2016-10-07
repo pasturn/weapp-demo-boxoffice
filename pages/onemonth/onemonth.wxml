@@ -1,0 +1,55 @@
+<!--oneday.wxml-->
+<view class="container">
+  <view class="nav nav-flex">
+    <view id="{{navCell.name}}" class="nav-cell {{navActive === navCell.name ? 'active': null}}" 
+    wx:for="{{topNav}}" wx:for-item="navCell" catchtap="navSwitch">
+    <text class="nav-cell-text">{{navCell.title}}</text>
+    </view>
+  </view>
+  <loading hidden="{{loadingHidden}}">
+    加载中...
+  </loading>
+   <modal class="modal" hidden="{{networkErrorModal}}" no-cancel bindconfirm="confirmErrorModal">
+    <view>服务器无响应,请重试</view>
+  </modal>
+  <template is="{{tabActive}}" data="{{...boxData,...statisticsData,currentDate}}"/>
+</view>
+
+<!--单月票房-->
+<template name="onemonth" >
+  <view id="content" class="content content-flex">
+    <view class="content-item">
+      <view class="sunBox">
+        <text>{{currentDate}}</text>
+      </view>
+    </view>
+    <view class="content-item bg-lightgreen">
+      <view class="list-h">
+        <text class="list-item-first">片名</text>
+        <text class="list-item">评分</text>
+        <text class="list-item">单月票房(万元) </text>
+        <text class="list-item">平均票价</text>  
+        <text class="list-item">平均人次</text>
+      </view>
+    </view>
+    <view class="content-item {{(index + 1) % 2 == 0 ? 'bg-lightgray' :null}}" wx:for="{{filmsList}}" wx:for-item="filmBoxData">
+      <view class="list-c">
+        <view class="list-item-first film-name">
+          <view class="rank {{filmBoxData.Irank=== '1' ?'top1':(filmBoxData.MovieRank === '2' ? 'top2':(filmBoxData.MovieRank ==='3' ? 'top3':null))}}">{{index+1}}</view>
+          <view class="item-title">{{filmBoxData.MovieName}}</view>
+          <text class="item-tip">{{filmBoxData.releaseTime}}上映</text>
+        </view>
+        <text class="list-item">{{filmBoxData.WomIndex}}</text>
+        <text class="list-item text-green">{{filmBoxData.boxoffice}}</text>
+        <text class="list-item">{{filmBoxData.avgboxoffice}}</text>
+        <text class="list-item">{{filmBoxData.avgshowcount}}</text>
+      </view>
+    </view>
+    <view class="content-item">
+      <view class="statisticsData">
+        <view><text class="s-data-item">单月票房：{{BoxOffice}}万</text><text class="s-data-item">单月人次：{{AudienceCount}}万</text> </view>
+        <view><text class="s-data-item">单月场次：{{ShowCount}}万场</text></view>
+      </view>
+    </view>
+  </view>
+</template>
